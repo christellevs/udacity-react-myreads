@@ -5,8 +5,6 @@
 This is the final solution for the Udacity React Nanodegree - React Fundamentals Course - MyReads project - completed by Christelle Van Sebroeck - 19-08-2022.
 It used the static starter template provided by Udacity.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) to bootstrap the project.
-
 ## Installation
 
 To run this project:
