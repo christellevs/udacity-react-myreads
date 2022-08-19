@@ -6,7 +6,7 @@ import * as BooksAPI from "../BooksAPI.js";
 
 import Book from "./Book.js";
 
-const MAX_QUERY = 30;
+const MAX_QUERY = 20;
 
 const SearchBooks = ({ currentBooks, handleShelfChange }) => {
   const [searchBooks, setSearchBooks] = useState([]);
