@@ -36,7 +36,7 @@ const BookLibrary = ({ currentBooks, handleShelfChange }) => {
         </div>
       </div>
       <div className="open-search">
-        <a onClick={() => handleAddBook()}>Add a book</a>
+        <button onClick={() => handleAddBook()}>Add a book</button>
       </div>
     </div>
   );

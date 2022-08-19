@@ -47,9 +47,9 @@ const SearchBooks = ({ currentBooks, handleShelfChange }) => {
   return (
     <div className="search-books">
       <div className="search-books-bar">
-        <a onClick={() => handleReturnLibrary()} className="close-search">
+        <button onClick={() => handleReturnLibrary()} className="close-search">
           Close
-        </a>
+        </button>
         <div className="search-books-input-wrapper">
           <input
             type="text"
