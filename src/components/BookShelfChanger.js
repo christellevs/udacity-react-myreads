@@ -29,14 +29,22 @@ const BookShelfChanger = ({ book, handleShelfChange }) => {
   };
 
   useEffect(() => {
-    getCurrentBookLocation();
+    let mounted = true;
+
+    if (mounted) {
+      getCurrentBookLocation();
+    }
+    return () => {
+      mounted = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="book-shelf-changer">
       <select value={shelf} onChange={handleChange}>
-        /* conditionally shows "Add to.." or "Move to..." depending if book is
-        already in shelf or not */
+        {/* conditionally shows "Add to.." or "Move to..." depending if book is
+        already in shelf or not */}
         {bookLocation === "search" ? (
           <option value="none" disabled>
             Add to...
@@ -46,7 +54,7 @@ const BookShelfChanger = ({ book, handleShelfChange }) => {
             Move to...
           </option>
         )}
-        /* conditionally highlights selected shelf */
+        {/* conditionally highlights selected shelf */}
         {shelfOptions.map((option, idx) =>
           book.shelf === option.value ? (
             <option
