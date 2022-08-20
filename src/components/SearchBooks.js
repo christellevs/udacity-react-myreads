@@ -14,16 +14,16 @@ const SearchBooks = ({ currentBooks, handleShelfChange }) => {
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
-    searchBook();
+    searchBook(e.target.value);
   };
 
-  const searchBook = async () => {
+  const searchBook = async (query) => {
     if (!query) {
       setSearchBooks([]);
     }
-
     if (query.trim()) {
       const res = await BooksAPI.search(query.trim(), MAX_QUERY);
+
       if (res && !res.error) {
         const joinedBooks = res.map((book) => {
           currentBooks.forEach((currBook) => {
